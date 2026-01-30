@@ -1,21 +1,32 @@
-# A COMPUTER VISION PROJECT
+# Computer Vision Project – Object Detection & Segmentation
 
-## This repository houses a computer vision project for object detection using three Open Source CV SOTA. In this repository,
-- I implemented the YOLO algorithm for real-time object detection and segmentation
-- I also implemented the Mask_R_CNN also for real-time object detection and segmentation using **TORCH VISION**
+This repository contains a computer vision project implementing **state-of-the-art (SOTA) open-source algorithms** for object detection and segmentation: **YOLO** and **Mask R-CNN (TorchVision)**.  
 
-### Project Overview
-- This project utilizes the YOLO (You Only Look Once) algorithm for real-time object detection and segmentation.
-- It also incorporates the Mask R-CNN model from TorchVision for enhanced object detection and segmentation capabilities.
+---
 
-### Features
-- Real-time object detection
-- High accuracy and speed
-- Easy integration with various applications
+## Project Overview
 
-### Installation
+This project demonstrates real-time object detection and segmentation using two powerful algorithms:
 
-1. Clone the repository 
+1. **YOLO (You Only Look Once)** – High-speed real-time object detection.  
+2. **Mask R-CNN (TorchVision)** – Accurate object detection with instance segmentation capabilities.  
+
+Both algorithms are implemented to process videos and produce output videos with detected objects highlighted.
+
+---
+
+## Features
+
+- Real-time object detection  
+- High accuracy and speed  
+- Easy integration with various applications  
+- Output videos with detected objects automatically saved  
+
+---
+
+## Installation
+
+1. **Clone the repository**  
     ```bash
     git clone https://github.com/myingineer/cv_project.git
     cd cv_project
@@ -24,7 +35,7 @@
 2. Create a Virtual Environment 
     ```bash
     python -m venv venv
-    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+    source venv/bin/activate   # On Windows: `venv\Scripts\activate`
     ```
 
 3. Install Dependencies 
@@ -32,21 +43,28 @@
     pip install -r requirements.txt
     ```
 
-    If you are on a Mac, inside the terminal run this code 
+4.  Mac-specific step (if using macOS)
     ```bash
     /Applications/Python\ 3.14/Install\ Certificates.command
     ```
-    Bear in mind the **3.14** must match the Python version you have installed 
+    **Make sure the version number (3.14) matches your installed Python version**
 
 ### Usage
 1. Algorithm selection
-    - Depending on the algorithm you want to try out, you can load your own videos into the videos folder of that algorithm.
-    - Use an easy name for the video file (`peferably mp4 format`)
-    - If you copied a video to `running_Yolo/videos` folder, in the **yolo.py**. file line **8**, update the file in **quotes** to your video file name.
-    - If you copied a video to **running_Mask_RCNN/videos**, in the **Mask_rcnn.py**. file line **46**, update the file in **quotes** to your video file name.
+    - Depending on the algorithm you want to try out, place your video file in the corresponding `videos` folder:
+        - `running_Yolo/videos` → for YOLO
+        - `running_Mask_RCNN/videos` → for Mask R-CNN
+    - Use simple file names (preferably `.mp4` format).
+    - Update the video file name in the script:
+        - YOLO: `yolo.py`, line **8**
+        - Mask R-CNN: `Mask_rcnn.py`, line **46**
 
 2. Running the Script
     - For your selected algorithm, run the file for the said code
+    ```bash
+    python yolo.py       # For YOLO
+    python Mask_rcnn.py  # For Mask R-CNN
+    ```
 
-3. Viewing Outputs
+3. View Outputs
     - The output video with detected objects will be saved in the `output_videos` folder which automatically generates once you run the code.
