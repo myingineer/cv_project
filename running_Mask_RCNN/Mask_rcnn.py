@@ -58,6 +58,8 @@ out = cv2.VideoWriter(
     (width, height)                                 
 )
 
+PAUSE_MS = 300  # Pause duration in milliseconds after detections
+
 # Minimum confidence score to accept a detection
 CONF_THRESHOLD = 0.5
 
@@ -114,11 +116,15 @@ while cap.isOpened():
     # Loop through detections
     # ----------------------------
 
+    detections = 0  # Count detections in this frame
+
     for i in range(len(boxes)):     # Iterate over all detected objects
 
         # Skip detections below confidence threshold
         if scores[i] < CONF_THRESHOLD:
             continue
+
+        detections += 1  # Valid detection found
 
         # Get bounding box coordinates
         x1, y1, x2, y2 = boxes[i].int().cpu().numpy()
@@ -150,7 +156,7 @@ while cap.isOpened():
             f"{label} {conf}",
             (x1, max(30, y1)),
             cv2.FONT_HERSHEY_SIMPLEX,
-            0.8,
+            2,
             (0, 255, 0),
             2
         )
@@ -180,7 +186,12 @@ while cap.isOpened():
     cv2.imshow("Mask R-CNN", frame) # Display frame
 
     # Exit if 'q' is pressed
-    if cv2.waitKey(1) & 0xFF == ord('q'):
+    if detections > 0:
+        key = cv2.waitKey(PAUSE_MS)
+    else:
+        key = cv2.waitKey(1)
+
+    if key & 0xFF == ord('q'):
         break
 
 # ----------------------------
