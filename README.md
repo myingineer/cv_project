@@ -58,13 +58,13 @@ All three algorithms process video inputs and generate output videos with detect
 
 ### Usage
 1. Algorithm selection
-    Depending on the algorithm you want to try out, place your video file in the corresponding `videos` folder:
+    - Depending on the algorithm you want to try out, place your video file in the corresponding `videos` folder:
         - `running_Yolo/videos` → for YOLO
         - `running_Mask_RCNN/videos` → for Mask R-CNN
         - `running_Faster_RCNN/videos` → for Faster R-CNN
-    Guidelines
-    - Use simple file names (preferably `.mp4` format).
-    Update the video file name in the script:
+    - Guidelines
+        - Use simple file names (preferably `.mp4` format).
+    - Update the video file name in the script:
         - YOLO: `yolo.py`, line **8**
         - Mask R-CNN: `Mask_rcnn.py`, line **46**
         - Faster R-CNN: `faster_rcnn.py`, line **44**
@@ -88,8 +88,8 @@ All three algorithms process video inputs and generate output videos with detect
 - The project is designed for **qualitative and comparative evaluation** of detection and segmentation methods.
 
 ## AUTHOR
-Alexander Soromtochukwu Emeka-Akam
-Applied AI Student @ IU International University of Applied Sciences
-Berlin, Germany
+- Alexander Soromtochukwu Emeka-Akam
+- Applied AI Student @ IU International University of Applied Sciences
+- Berlin, Germany
 - GitHub: [myingineer](https://github.com/myingineer/)
 - LinkedIn: [Alexander Soromtochukwu Emeka-Akam](https://www.linkedin.com/in/myingineer/)
