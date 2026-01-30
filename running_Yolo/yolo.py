@@ -38,7 +38,7 @@ fps = int(cap.get(cv2.CAP_PROP_FPS)) # Get frames per second
 
 # Define the codec and create VideoWriter object
 out = cv2.VideoWriter(
-    "yolo__output_videos/output_video_yolov8_segmentation.mp4",
+    "output_videos/output_video_yolo.mp4",
     cv2.VideoWriter_fourcc(*'mp4v'),
     fps,
     (width, height)
