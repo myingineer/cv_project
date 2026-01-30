@@ -65,6 +65,8 @@ CONF_THRESHOLD = 0.5
 # Main video processing loop
 # ----------------------------
 
+frame_id = 0 # Frame counter
+
 while cap.isOpened():  
 
     # Read a frame from the video           
@@ -77,6 +79,13 @@ while cap.isOpened():
     # ----------------------------
     # Preprocess frame
     # ----------------------------
+
+    frame_id += 1 # Increment frame counter
+
+    # Skip frames to speed up processing
+    if frame_id % 5 != 0:
+        out.write(frame)
+        continue
 
     # Convert BGR (OpenCV format) to RGB (PyTorch format)
     rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
