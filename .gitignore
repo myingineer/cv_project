@@ -175,5 +175,6 @@ pyrightconfig.json
 
 # weights
 yolo_weights/
+output_videos/
 
 # End of https://www.toptal.com/developers/gitignore/api/python
