@@ -1,4 +1,10 @@
 # Computer Vision Model Comparison
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white)
+![OpenCV](https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white)
+![YOLO](https://img.shields.io/badge/YOLO-111F68?style=flat-square)
+![Faster_R--CNN](https://img.shields.io/badge/Faster_R--CNN-333333?style=flat-square)
+![Mask_R--CNN](https://img.shields.io/badge/Mask_R--CNN-333333?style=flat-square)
 
 Comparison of YOLO, Faster R-CNN, and Mask R-CNN for object detection and instance segmentation.
 
