@@ -1,6 +1,6 @@
-# Computer Vision Project – Object Detection & Segmentation
+# Computer Vision Model Comparison
 
-This repository contains a computer vision project implementing **state-of-the-art (SOTA) open-source algorithms** for object detection and segmentation: **YOLO**, **Mask R-CNN (TorchVision)**, and **Faster R-CNN**.
+Comparison of YOLO, Faster R-CNN, and Mask R-CNN for object detection and instance segmentation.
 
 ---
 
